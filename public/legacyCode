@@ -1,0 +1,75 @@
+// from store/index.js
+/*
+//don't the reducer's state
+const counterReducer = (state = initialState, action) => {
+    if (action.type === 'increment') return {
+        counter: state.counter + 1,
+        showCounter: state.showCounter
+    };
+
+    if (action.type === 'decrement') return {
+        counter: state.counter - 1,
+    };
+
+    if (action.type === 'increase') return {
+        counter: state.counter + action.amount,
+        showCounter: state.showCounter
+    };
+
+    if (action.type === 'toggle') return {
+        showCounter: !state.showCounter,
+        counter: state.counter
+    }
+
+    return state;
+}
+*/
+
+/*
+
+class Counter extends Component {
+    incrementHandler = () => {
+        this.props.increment();
+    }
+
+    decrementHandler = () => {
+        this.props.decrement();
+    }
+
+
+    toggleCounterHandler = () => {
+    };
+
+
+    render() {
+        return (
+            <main className={classes.counter}>
+                <h1>Redux Counter</h1>
+                <div className={classes.value}>{this.props.counter}</div>
+                <button onClick={this.toggleCounterHandler.bind(this)}>Toggle Counter</button>
+                <div>
+                    <button onClick={this.incrementHandler.bind(this)}>Increment</button>
+                    <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
+                </div>
+            </main>
+        );
+    }
+}
+
+//maps redux state to props
+const mampStateToProps = state => {
+    return {counter: state.counter};
+}
+
+// store dispatch funct in props, in the Counter comp we have certain props which we can exe as funct,
+// when exe they dispatch an action to the redux store
+const mapDispatchToProps = dispatch => {
+    return {
+        increment: () => dispatch({type: 'increment'}),
+        decrement: () => dispatch({type: 'decrement'})
+    };
+}
+
+//higher-order comp
+export default connect(mampStateToProps, mapDispatchToProps)(Counter);
+*/
